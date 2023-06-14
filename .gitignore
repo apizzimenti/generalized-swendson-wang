@@ -1,0 +1,9 @@
+
+# Ignore extraneous macOS files.
+.DS_Store
+
+# Ignore intermediate compilation stuff.
+*.dSYM/*
+*.o
+# Ignore libraries.
+libs/*
