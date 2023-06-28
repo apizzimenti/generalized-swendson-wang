@@ -2,6 +2,7 @@
 #include <iostream>
 #include <numeric>
 #include <vector>
+#include <linbox/matrix/sparse-matrix.h>
 
 #include "Structures.h"
 #include "Support.h"

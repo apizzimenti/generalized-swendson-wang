@@ -1,18 +1,18 @@
 
 # Set compiler and flags; we'll use g++ since that seems to go pretty fast here.
 CXX = g++
-CXXFLAGS = --std=c++20 -I.
+CXXFLAGS = --std=c++17
 
 # Sources, objects.
-sources = main.cpp Structures.cpp Support.cpp Simulation.cpp
+sources = main.cpp Structures.cpp Support.cpp # Simulation.cpp
 objects = $(subst .cpp,.o,$(sources))
 
-all: simulation
+all: main
 
-simulation: $(objects)
-	$(CXX) $(CXXFLAGS) -o simulation $(objects)
+main: $(objects)
+	$(CXX) $(CXXFLAGS) -o main $(objects)
 
-simulation.o: main.cpp Structures.h 
+main.o: main.cpp Structures.h 
 
 Structures.o: Structures.h Structures.cpp Support.h
 
